@@ -181,6 +181,8 @@ jQuery(function ($) {
 
 			if ($el.data('abort')) {
 				$el.data('abort', false);
+			} else if (!val) {
+				this.destroy(e);
 			} else {
 				this.todos[this.indexFromEl(el)].title = val;
 			}
